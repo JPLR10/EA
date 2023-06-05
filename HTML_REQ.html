@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script 
+    src="https://thunkable.github.io/webviewer-extension/thunkableWebviewerExtension.js"
+    type="text/javascript">
+</script>
+</head>
+
+<body>
+
+<form name="form" id="x1" method="POST" action="https://paynow.netcash.co.za/site/paynow.aspx" target="_top"> 
+<input type="hidden" id="M1" name="M1" value="96b9a72a-b9d7-438c-95ae-0884495e2783">
+<input type="hidden" id="M2" name="M2" value="24ade73c-98cf-47b3-99be-cc7b867b3080">
+<input type="hidden" id="p2" name="p2" value="ID:">
+<input type="hidden" id="p3" name="p3" value="Wallet TopUp">
+<input type="text" id="p4" name="p4" value="0.00">
+<input type="hidden" id="B" name="Budget" value="Y">
+<input name="submit" id="S" type="submit" value="Submit">
+</form>
+</body>
+
+<script type="text/javascript">
+    ThunkableWebviewerExtension.receiveMessage(function(message) {
+    document.getElementById('p4').value = message; ///innerHTML
+    });
+</script>
+</html>
